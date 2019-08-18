@@ -67,6 +67,15 @@ export const appRouters: any = [
     component: LoadableComponent(() => import('../../scenes/Tenants')),
   },
   {
+    path: '/products',
+    permission: 'Pages.Products',
+    title: 'Products',
+    name: 'product',
+    icon: 'appstore',
+    showInMenu: true,
+    component: LoadableComponent(() => import('../../scenes/Products')),
+  },
+  {
     path: '/about',
     permission: '',
     title: 'About',
