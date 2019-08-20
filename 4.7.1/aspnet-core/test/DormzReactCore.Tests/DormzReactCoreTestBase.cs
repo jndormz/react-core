@@ -13,6 +13,7 @@ using DormzReactCore.Authorization.Users;
 using DormzReactCore.EntityFrameworkCore;
 using DormzReactCore.EntityFrameworkCore.Seed.Host;
 using DormzReactCore.EntityFrameworkCore.Seed.Tenants;
+using DormzReactCore.Models;
 using DormzReactCore.MultiTenancy;
 
 namespace DormzReactCore.Tests
@@ -43,6 +44,16 @@ namespace DormzReactCore.Tests
             {
                 NormalizeDbContext(context);
                 new TenantRoleAndUserBuilder(context, 1).Create();
+            });
+
+            // Seed initial data for default product
+            UsingDbContext(context => {
+                context.Products.Add(
+                    new Product {
+                        Description = "Product test",
+                        Price = 1.0m
+                    }
+                );
             });
 
             LoginAsDefaultTenantAdmin();
