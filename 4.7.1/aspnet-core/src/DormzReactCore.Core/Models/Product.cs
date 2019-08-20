@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace DormzReactCore.Products {
+namespace DormzReactCore.Models {
 
     public class Product : Entity<int> {
         [Required]

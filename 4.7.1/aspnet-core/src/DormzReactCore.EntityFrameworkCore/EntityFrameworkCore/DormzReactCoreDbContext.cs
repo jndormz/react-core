@@ -3,7 +3,7 @@ using Abp.Zero.EntityFrameworkCore;
 using DormzReactCore.Authorization.Roles;
 using DormzReactCore.Authorization.Users;
 using DormzReactCore.MultiTenancy;
-using DormzReactCore.Products;
+using DormzReactCore.Models;
 
 namespace DormzReactCore.EntityFrameworkCore
 {

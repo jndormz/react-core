@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using DormzReactCore.Models;
 
 namespace DormzReactCore.Products.Dto {
 
